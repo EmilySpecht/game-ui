@@ -1,0 +1,12 @@
+@media screen and (max-width: 640px) {
+    .home-page {
+        padding: 0;
+        height: 100vh;
+        background-color: #132039;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
