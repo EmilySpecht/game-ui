@@ -1,7 +1,37 @@
 @media screen and (max-width: 640px) {
-    .character-feature {
+    .character-feature-button {
+        width: 75px;
+        height: 70px;
+        border-radius: 15px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        overflow: hidden;
+    }
+
+    .character-feature-image {
+        width: 65px;
+        height: 60px;
         border: 4px outset #5c38c3;
         border-radius: 15px;
-        width: 60px;
+        filter: brightness(115%);
+    }
+
+    .character-feature-button:hover {
+        transform: scale(1.1);
+        filter: brightness(130%) saturate(120%);
+
+    }
+
+    .character-feature-button:hover:before {
+        content: '';
+        width: 20px;
+        height: 80px;
+        position: absolute;
+        top: 0;
+        background: linear-gradient(65deg, #ffffff80, #ffffff00);
+        filter: brightness(150%);
+        animation: reflect 5s infinite;
     }
 }
