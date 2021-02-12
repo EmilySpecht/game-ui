@@ -1,65 +1,5 @@
 
 @media screen and (max-width: 640px)  {
-    .store-modal {
-        box-sizing: border-box;
-        width: 95%;
-        margin: auto;
-        color: #c8bcff;
-        font-weight: 600;
-        overflow: hidden;
-    }
-
-    .banner {
-        position: relative;
-        border: 4px outset #b9b1ff;
-        border-radius: 20px 20px 0 0;
-        background-color: #8b7cff;
-        color: #c8bcff;
-        text-align: center;
-        font-weight: bold;
-        font-size: 20px;
-        padding: 5px 0;
-    }
-
-    .banner:after {
-        content: '';
-        position: absolute;
-        top: -5px;
-        left: 80px;
-        border: 5px outset #b9b1ff;
-        transform: skew(-20deg, -20deg) rotate(150deg);
-    }
-
-    .close-button {
-        position: absolute;
-        top: 8px;
-        right: 20px;
-        background: none;
-        outline: none;
-        border: none;
-        color: #cbcbcb;
-        font-weight: bold;
-        font-size: 20px;
-    }
-
-    .close-button:hover {
-        transform: scale(1.2);
-        text-shadow: 0px 0px 3px #5c7fff;
-    }
-
-    .content {
-        background: radial-gradient(rgb(5, 98, 141) 10%, rgba(54, 65, 86, 0.31) 80%);
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        z-index: -0;
-        border: 4px outset #2b488550;
-        border-top: none;
-        border-bottom: none;
-    }
-
     .image-dragon {
         height: 80px;
         width: 100%;
@@ -76,7 +16,7 @@
         padding: 5px 10px;
         color: #cbcbcb;
         font-size: 18px;
-        font-family: Calibri;
+        font-family: Calibri, serif;
         letter-spacing: -1px;
         width: 95%;
         margin: 5px;
@@ -111,41 +51,9 @@
         flex-direction: column;
         align-items: center;
         color: white;
-        font-family: Calibri;
+        font-family: Calibri, serif;
         font-weight: bold;
         line-height: 13px;
-    }
-
-    .bottom-border {
-        border: 4px outset #b9b1ff;
-        border-top: none;
-        border-radius: 0 0 20px 20px;
-        background-color: #8b7cff;
-        height: 6px;
-    }
-
-    /*.store-modal:before {*/
-    /*    content: url("https://pa1.narvii.com/7031/1f7f626f40e25a1c22285b430d781f1ff9e95440r1-480-270_hq.gif");*/
-    /*    position: absolute;*/
-    /*    filter: invert(75%);*/
-    /*}*/
-
-    .content:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 200%;
-        height: 600px;
-        transform: skew(-30deg);
-        background: repeating-linear-gradient(
-                90deg,
-                #64689605 3px,
-                #64689620 10px,
-                #64689605 100px,
-                #64689610 80px,
-                #64689600 150px
-        );
-        z-index: -1;
     }
 
     .item:hover {

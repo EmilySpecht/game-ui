@@ -1,6 +1,7 @@
 import React from "react";
 
 import './store-modal.style.css'
+import {LayoutModal} from "../layout-modal/layout-modal.component";
 
 const itensShop = [
     {
@@ -25,7 +26,7 @@ const itensShop = [
     }
 ]
 
-export const StoreModal = () => {
+export const StoreModal = ({ setIsOpen }) => {
 
     const itemsModal = itensShop.map((item) => {
         return (
@@ -42,24 +43,14 @@ export const StoreModal = () => {
     })
 
     return (
-        <section className='store-modal'>
-            <div className='banner'>
-                <span>SHOP</span>
-                <button className='close-button'>
-                    X
-                </button>
+        <LayoutModal title='SHOP' setIsOpen={setIsOpen}>
+            <h1 className='title'>DRAGON BUNDLE</h1>
+            <div className='image-dragon'>
             </div>
-            <div className='content'>
-                <h1 className='title'>DRAGON BUNDLE</h1>
-                <div className='image-dragon'>
-                </div>
-                <h1 className='title'>GEMS</h1>
-                <div className='items-list'>
-                    {itemsModal}
-                </div>
+            <h1 className='title'>GEMS</h1>
+            <div className='items-list'>
+                {itemsModal}
             </div>
-            <div className='bottom-border'>
-            </div>
-        </section>
+        </LayoutModal>
     )
 }
