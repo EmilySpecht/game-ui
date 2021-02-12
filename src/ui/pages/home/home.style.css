@@ -2,11 +2,31 @@
     .home-page {
         padding: 0;
         height: 100vh;
-        background-color: #132039;
-        margin: 0 auto;
+        background: radial-gradient(#1c34b0, #132039 50%);
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
     }
+
+    .home-container {
+        margin: 0 20px;
+    }
+
+    .fast-menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+
+    .options-characters {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .character {
+        height: 400px;
+        position: relative;
+        z-index: 9999;
+    }
+
 }
