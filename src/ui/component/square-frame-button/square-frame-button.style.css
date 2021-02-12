@@ -1,0 +1,7 @@
+@media screen and (max-width: 640px) {
+    .character-feature {
+        border: 4px outset #5c38c3;
+        border-radius: 15px;
+        width: 60px;
+    }
+}

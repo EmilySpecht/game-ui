@@ -1,0 +1,45 @@
+@media screen and (max-width: 640px) {
+
+    .button-fast-menu {
+        position: relative;
+        border-radius: 5px;
+        background: linear-gradient(#5c38c3, #42278d);
+        padding: 10px 25px;
+        border: 4px outset #6e52bf;
+        font-weight: bold;
+        color: white;
+        overflow: hidden;
+        display: block;
+    }
+
+    .button-fast-menu:after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 20px;
+        border: 4px outset #685dc1;
+        transform: skew(-20deg, -20deg) rotate(150deg);
+    }
+
+    .button-fast-menu:before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        height: 100px;
+        width: 20px;
+        background: linear-gradient(65deg, #ffffff80, #ffffff00);
+        transform: rotate(30deg);
+        animation: reflect 5s infinite;
+    }
+
+    @keyframes reflect {
+        0% {
+            transform: rotate(30deg) translate(-80px);
+        }
+        100% {
+            transform: rotate(30deg) translate(1000px);
+        }
+    }
+
+
+}
