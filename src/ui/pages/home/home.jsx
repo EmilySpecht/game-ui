@@ -7,33 +7,33 @@ import Justice from '../../assets/images/character/justice.PNG'
 import Knowledge from '../../assets/images/character/knowledge.PNG'
 import Death from '../../assets/images/character/death.PNG'
 import Mcgonagall from '../../assets/images/character/mcgonagall.png'
-import './home.style.css'
+import Dumbledore from '../../assets/images/character/dumbledore.png'
+import Snape from '../../assets/images/character/snape.png'
+import Deatheater from '../../assets/images/character/deatheater.png'
 import {SquareFrame} from "../../component/square-frame-button/square-frame-button.component";
+import './home.style.css'
 
 export const HomePage = () => {
     const [isOpen, setIsOpen] = useState(true)
-
-    const openModal = () => {
-        setIsOpen(true)
-    }
+    const [selectedImage, setSelectedImage] = useState(Snape)
 
     return (
         <div className='home-page'>
             <Header/>
             <div className='home-container'>
                 <div className='fast-menu'>
-                    <ButtonFastMenu onClick={openModal}>GEMS SHOP</ButtonFastMenu>
+                    <ButtonFastMenu onclick={() => setIsOpen(true)}>GEMS SHOP</ButtonFastMenu>
                     <ButtonFastMenu>POWER SHOP</ButtonFastMenu>
                 </div>
-                <img src={Mcgonagall} className='character'/>
+                <img src={selectedImage} className='character'/>
                 <div className='options-characters'>
-                    <SquareFrame image={Poison} />
-                    <SquareFrame image={Knowledge} />
-                    <SquareFrame image={Justice} />
-                    <SquareFrame image={Death} />
+                    <SquareFrame image={Poison} onclick={() => setSelectedImage(Snape)}/>
+                    <SquareFrame image={Knowledge} onclick={() => setSelectedImage(Mcgonagall)}/>
+                    <SquareFrame image={Justice} onclick={() => setSelectedImage(Dumbledore)}/>
+                    <SquareFrame image={Death} onclick={() => setSelectedImage(Deatheater)}/>
                 </div>
+                <ButtonFastMenu className='advance-button'>ADVANCE</ButtonFastMenu>
             </div>
-
             {isOpen ? <StoreModal setIsOpen={setIsOpen}/> : null}
         </div>
     )
