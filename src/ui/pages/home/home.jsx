@@ -10,6 +10,8 @@ import Mcgonagall from '../../assets/images/character/mcgonagall.png'
 import Dumbledore from '../../assets/images/character/dumbledore.png'
 import Snape from '../../assets/images/character/snape.png'
 import Deatheater from '../../assets/images/character/deatheater.png'
+import Goblin from '../../assets/images/character/goblin.png'
+
 import {SquareFrame} from "../../component/square-frame-button/square-frame-button.component";
 import './home.style.css'
 
@@ -22,17 +24,19 @@ export const HomePage = () => {
             <Header/>
             <div className='home-container'>
                 <div className='fast-menu'>
-                    <ButtonFastMenu onclick={() => setIsOpen(true)}>GEMS SHOP</ButtonFastMenu>
-                    <ButtonFastMenu>POWER SHOP</ButtonFastMenu>
+                    <ButtonFastMenu onclick={() => setIsOpen(true)} classname='button-fast'>GEMS SHOP</ButtonFastMenu>
+                    <ButtonFastMenu className='button-fast-menu'>POWER SHOP</ButtonFastMenu>
                 </div>
-                <img src={selectedImage} className='character'/>
+                <div className='light-character'>
+                    <img src={selectedImage} className='character'/>
+                </div>
                 <div className='options-characters'>
                     <SquareFrame image={Poison} onclick={() => setSelectedImage(Snape)}/>
                     <SquareFrame image={Knowledge} onclick={() => setSelectedImage(Mcgonagall)}/>
                     <SquareFrame image={Justice} onclick={() => setSelectedImage(Dumbledore)}/>
-                    <SquareFrame image={Death} onclick={() => setSelectedImage(Deatheater)}/>
+                    <SquareFrame image={Death} onclick={() => setSelectedImage(Goblin)}/>
                 </div>
-                <ButtonFastMenu className='advance-button'>ADVANCE</ButtonFastMenu>
+                <ButtonFastMenu classname='advance-button'>ADVANCE</ButtonFastMenu>
             </div>
             {isOpen ? <StoreModal setIsOpen={setIsOpen}/> : null}
         </div>

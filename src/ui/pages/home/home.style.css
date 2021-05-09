@@ -31,4 +31,13 @@
     .advance-button {
         width: 100%;
     }
+
+    .button-fast {
+        width: 50%;
+    }
+
+    .light-character {
+        width: 100%;
+        background: radial-gradient(50% 50% at 50% 50%, #6328b5 0%, #c800ff00 100%);
+    }
 }
